@@ -40,7 +40,7 @@ class Tweet(object):
         self.__creation = creation
 
     def to_string(self):
-        return "Author:", self.get_author(), ", Text:", self.get_text(), ", Location:", self.get_location(), ", Creation:", self.get_creation()
+        return "['{0}','{1}','{2}','{3}']".format(self.get_author(), self.get_text(), self.get_location(), self.get_creation())
 
 '''
 t = Tweet("Javi", "Wassup", "100,300", "5")

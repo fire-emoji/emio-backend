@@ -40,5 +40,9 @@ def search_tweets(tweepy, api, keyword, location, count):
 
 
 api = auth_setup()
-for a in search_tweets(tweepy, api, "", "37.781157,-122.398720,5mi", 1000):
-    print a.to_string()
+with open("Output.txt", "w") as f:
+    f.write("[")
+    list = search_tweets(tweepy, api, "", "37.781157,-122.398720,5mi", 300)
+    for t in list[:-1]:
+        f.write(t.to_string() + ",")
+    f.write(list[-1].to_string() + "]")
