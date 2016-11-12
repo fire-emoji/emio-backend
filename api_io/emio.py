@@ -16,12 +16,15 @@ class Emotion_Meta(Resource):
         return "Hello world!"
 
 class Emotion_location(Resource):
-    def get(self, longitude, latitude):
-        j = {'longitude':longitude, 'latitude':latitude, 'Emotion':"Happy!"}
+    def get(self, longitude, latitude, longitude2, latitude2):
+        j = {
+        'longitude':longitude,
+        'latitude':latitude,
+        'Emotion':"Happy!"}
         return j
 
 #Connect classes to routes.
-api.add_resource(Emotion_location, '/emio/<int:longitude>,<int:latitude>')
+api.add_resource(Emotion_location, '/emio/<int:longitude>,<int:latitude>,<int:longitude2>,<int:latitude2>')
 api.add_resource(Emotion_Meta, '/emio/intro')
 
 if __name__ == '__main__':
