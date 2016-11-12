@@ -17,6 +17,12 @@ class Emotion_Meta(Resource):
 
 class Emotion_location(Resource):
     def get(self, longitude, latitude, longitude2, latitude2):
+        # Send to javi's module
+        # tweets = <javiModule>.getTweets(<params>)
+        # Send to Jake's module
+        # emioData = <Jake's module>.getEmotion(tweets)
+        # for i in emioData:
+        #   put into json like below
         j = {
         'longitude':longitude,
         'latitude':latitude,
