@@ -58,6 +58,4 @@ api.add_resource(Emotion_Filter_Emotion, '/emio/<int:longitude>,<int:latitude>,<
 api.add_resource(amarequest, '/emio/<string:origin>/<int:max_price>')
 
 if __name__ == '__main__':
-    app.debug = True
-    port = int(os.enviorn.get("PORT",5000))
-    emio.run(host='0.0.0.0', port = port)
+    emio.run()
