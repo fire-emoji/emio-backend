@@ -10,6 +10,7 @@ import json
 emio = Flask(__name__)
 api = Api(emio)
 
+# Class for each api route
 class Emotion_Meta(Resource):
     def get(self):
         return "Hello world!"
@@ -19,6 +20,7 @@ class Emotion_location(Resource):
         j = {'longitude':longitude, 'latitude':latitude, 'Emotion':"Happy!"}
         return j
 
+#Connect classes to routes.
 api.add_resource(Emotion_location, '/emio/<int:longitude>,<int:latitude>')
 api.add_resource(Emotion_Meta, '/emio/intro')
 
