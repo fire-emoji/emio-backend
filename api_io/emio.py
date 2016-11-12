@@ -24,14 +24,27 @@ class Emotion_location(Resource):
         # for i in emioData:
         #   put into json like below
         j = {
-        'longitude':longitude,
-        'latitude':latitude,
-        'Emotion':"Happy!"}
+        "longitude":longitude,
+        "latitude":latitude,
+        "Emotion":"Happy!"}
+        return j
+class Emotion_Filter_Topic(Resource):
+    def get(self, longitude, latitude, longitude2, latitude2, keyword):
+        # Prep for filter keyword
+        j = 0
+        return j
+
+class Emotion_Filter_Emotion(Resource):
+    def get(self, longitude, latitude, longitude2, latitude2, emotion)
+        # prep for emotional filter
+        j = 0;
         return j
 
 #Connect classes to routes.
-api.add_resource(Emotion_location, '/emio/<int:longitude>,<int:latitude>,<int:longitude2>,<int:latitude2>')
 api.add_resource(Emotion_Meta, '/emio/intro')
+api.add_resource(Emotion_location, '/emio/<int:longitude>,<int:latitude>,<int:longitude2>,<int:latitude2>')
+api.add_resource(Emotion_Filter_Topic, '/emio/<int:longitude>,<int:latitude>,<int:longitude2>,<int:latitude2>/<string:keyword>')
+api.add_resource(Emotion_Filter_Emotion, '/emio/<int:longitude>,<int:latitude>,<int:longitude2>,<int:latitude2>/<string:emotion>')
 
 if __name__ == '__main__':
     emio.run()
