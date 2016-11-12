@@ -45,7 +45,7 @@ class Emotion_Filter_Emotion(Resource):
 
 class amarequest(Resource):
     def get(self, origin, max_price):
-        a = amadeus(origin, max_price)
+        a = amadeus.amadeus(origin, max_price)
         response = a.makeRequest()
         return response
 

@@ -22,10 +22,9 @@ class amadeus:
         self.apikey = "RvgLqBzb1H67WTUb4WQbKKQPgmk9SAlK"
         self.origin = _origin
         self.max_price = _max_price
-        packageForPing()
-
-    def packageForPing(self):
         self.req = "http://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin={0}&max_price={1}&apikey={2}".format(self.origin,self.max_price,self.apikey)
+        # print self.req
+
 
     def makeRequest(self):
         try:
