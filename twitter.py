@@ -2,11 +2,11 @@ import tweepy
 from tweet import Tweet
 
 def auth_setup():
-    consumer_key = 'HoOTtmR9Fb38te3fSfoVp8WAx'
-    consumer_secret = 'A0XCKYvBnU9JoXqxQJSsh90kfYqamUA9YB3yUyJFQfbs7sLESu'
+    consumer_key = cons_key
+    consumer_secret = cons_secret
 
-    access_token = '64691466-uatce40p59OjYvs69eZOizftD9terGiCmgvlbNxjf'
-    access_token_secret = 'ACx8cAOf3mNhtj5rdZOivzGCj4OdarbY0i5X21KM4BjEc'
+    access_token = acc_token
+    access_token_secret = acc_token_secret
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
